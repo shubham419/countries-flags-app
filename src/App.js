@@ -12,9 +12,12 @@ function App() {
 
   const getCountriesData = async () => {
     const data = await fetchCountryDetail();
-    setCountriesData(data);
-    setFilteredData(data);
-    console.log(data);
+    if(data){
+      setCountriesData(data);
+      setFilteredData(data);
+      console.log(data);
+    }
+
   };
 
   const handleSearch = (value) => {
