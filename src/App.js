@@ -35,7 +35,7 @@ function App() {
       <header className="App-header">
         <SearchBar handleSearch={handleSearch} />
       </header>
-      <div className={styles.countryCard}>
+      <div className="countryCard">
         {filteredData.map((country) => (
           <Flags
             img={country.flags.png}
