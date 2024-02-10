@@ -1,12 +1,13 @@
-import React from 'react'
-import FlagCard from './FlagCard'
+import React from "react";
+import FlagCard from "./FlagCard";
 
-const Flags = ({img, alt ,title}) => {
+const Flags = ({ img, alt, title }) => {
   return (
-    <div>
-        <FlagCard img={img} alt={alt} title={title}/>
+    <div className="countryCard">
+      <img src={img} alt={alt} />
+      <h2>{title}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default Flags
+export default Flags;

@@ -1,7 +1,25 @@
-.countryCard{
+.countryCardWrapper{
   display: flex;
   flex-wrap: wrap;
   height: 10vh;
   justify-content: center;
   align-items: center;
+}
+
+.countryCard{
+
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+      height: 100px;
+      width: 100px;
+  }
 }

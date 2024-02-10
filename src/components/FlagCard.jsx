@@ -4,9 +4,8 @@ import styles from './Flags.module.css'
 
 const FlagCard = ({img, alt ,title}) => {
   return (
-    <div className={styles.flagCard}>
-        <img src={img} alt={alt} />
-        <h2>{title}</h2>
+    <div className={ styles.flagCard}>
+     
     </div>
   )
 }
