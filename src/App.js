@@ -8,7 +8,6 @@ import SearchBar from "./components/SearchBar";
 
 function App() {
   const [countriesData, setCountriesData] = useState([]);
-
   const [filteredData, setFilteredData] = useState([]);
 
   const getCountriesData = async () => {
@@ -18,13 +17,14 @@ function App() {
     console.log(data);
   };
 
-  const handleSearch = useCallback((event) => {
-    const value = event.target.value;
+  const handleSearch = (value) => {
+    console.log(value);
     const newData = countriesData.filter((country) => {
-      return country.name.common.toLowerCase().includes(value.toLowerCase());
+      const res = country.name.common.toLowerCase().includes(value.toLowerCase());
+      return res;
     });
     setFilteredData(newData);
-  }, []);
+  }
 
   useEffect(() => {
     getCountriesData();

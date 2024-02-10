@@ -1,12 +1,20 @@
-import React from 'react'
-import styles from './Flags.module.css'
+import React, { useState } from "react";
+import styles from "./Flags.module.css";
 
-const SearchBar = ({handleSearch}) => {
+const SearchBar = ({ handleSearch }) => {
+
   return (
     <div className={styles.searchbar}>
-        <input type="text" placeholder='Search for countries' onChange={handleSearch}/>
+      <input
+        type="text"
+        className={styles.inputText}
+        placeholder="Search for countries"
+        onChange={(event) => {
+          handleSearch(event.target.value);
+        }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
